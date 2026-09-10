@@ -1,0 +1,114 @@
+{
+    "layer": "top",
+    "position": "top",
+    "exclusive": true,
+    "height": 30,
+    "spacing": 4,
+
+    "modules-left": ["hyprland/workspaces", "custom/uptime", "cpu", "custom/gpu", "memory", "temperature"],
+    "modules-center": ["clock"],
+    "modules-right": ["battery", "custom/network", "mpris", "pulseaudio", "custom/power"],
+
+    "hyprland/workspaces": {
+        "format": "{name} {windows}",
+        "format-window-separator": " ",
+        "window-rewrite-default": "",
+        "window-rewrite": {
+            "class<alacritty>": "",
+            "class<firefox>": "",
+            "class<google-chrome>": "",
+            "class<discord>": "",
+            "class<Code>": "󰨞",
+            "class<code-oss>": "󰨞",
+            "class<obsidian>": "",
+            "class<thunar>": "",
+            "class<burp": "",
+            "class<kitty>": ""
+        }
+    },
+
+    "custom/uptime": {
+        "exec": "/home/len/.config/waybar/scripts/uptime.sh",
+        "interval": 60,
+        "format": "󰅐 {}",
+        "tooltip-format": "Uptime: {}"
+    },
+
+    "cpu": {
+        "format": "CPU {usage}%",
+        "interval": 2
+    },
+
+    "memory": {
+        "format": "RAM {percentage}%",
+        "tooltip-format": "{used} / {total}GiB",
+        "interval": 2
+    },
+
+    "custom/gpu": {
+        "exec": "/home/len/.config/waybar/scripts/gpu_usage.sh",
+        "interval": 2,
+        "format": "GPU {}%",
+        "tooltip-format": "GPU: {}%"
+    },
+
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
+        "critical-threshold": 80,
+        "format": " {temperatureC}°C",
+        "format-critical": " {temperatureC}°C",
+        "tooltip": true,
+        "tooltip-format": "CPU Temp: {temperatureC}°C",
+        "interval": 2
+    },
+
+    "clock": {
+        "format": "{:%a %d %b  %H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>"
+    },
+
+    "battery": {
+        "bat": "BAT1",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󱟢 {capacity}%",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "tooltip-format": "{timeTo} {power}",
+        "interval": 5
+    },
+
+    "custom/network": {
+        "exec": "/home/len/.config/waybar/scripts/network.sh",
+        "interval": 5,
+        "format": "{}",
+        "tooltip": true
+    },
+
+    "mpris": {
+        "format": "{title} - {artist}",
+        "format-paused": "{title} - {artist}",
+        "max-length": 50,
+        "tooltip": false,
+        "interval": 2
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "Muted",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "tooltip": false,
+        "on-click": "pavucontrol"
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "wlogout -b 1 -c 20 -r 20 -L 1700 -R 1700 -T 325 -B 325"
+    }
+}

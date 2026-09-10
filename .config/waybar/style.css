@@ -1,0 +1,147 @@
+/* General */
+* {
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font Mono", monospace;
+    font-size: 11px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(20, 20, 20, 0);
+    color: #ffffff;
+}
+
+/* LEFT */
+.modules-left {
+    background-color: rgba(20, 20, 20, 0.2);
+    border-radius: 10px;
+    margin: 3px 0 3px 6px;
+}
+
+/* CENTER */
+.modules-center {
+    background-color: rgba(20, 20, 20, 0.2);
+    border-radius: 10px;
+    margin: 3px 0;
+}
+
+/* RIGHT */
+.modules-right {
+    background-color: rgba(20, 20, 20, 0.2);
+    border-radius: 10px;
+    margin: 3px 6px 3px 0;
+}
+
+/* Module spacing */
+#workspaces,
+#cpu,
+#memory,
+#custom-gpu,
+#custom-uptime,
+#clock,
+#battery,
+#custom-network,
+#pulseaudio,
+#mpris,
+#custom-power,
+#temperature {
+    padding: 0 10px;
+    margin: 0 2px;
+}
+
+/* Workspaces */
+#workspaces {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+#workspaces button {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 0 6px;
+    margin: 0 2px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+#workspaces button:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Power */
+#custom-power {
+    color: #ffffff;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+/* MPRIS */
+#mpris {
+    min-width: 0;
+}
+
+/* Clock */
+#clock {
+    font-weight: bold;
+}
+
+/* Battery */
+#battery.warning {
+    color: #ffd866;
+}
+
+#battery.critical {
+    color: #ff5555;
+}
+
+/* Temperature */
+#temperature.critical {
+    color: #ff5555;
+}
+
+/* Tooltip */
+tooltip {
+    background-color: rgba(20, 20, 20, 0.4);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+}
+
+tooltip label {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Interactive hover effect */
+#cpu,
+#memory,
+#custom-gpu,
+#custom-uptime,
+#temperature,
+#clock,
+#custom-network,
+#pulseaudio,
+#mpris,
+#custom-power,
+#battery {
+    transition: font-size 0.15s ease;
+}
+
+#cpu:hover,
+#memory:hover,
+#custom-gpu:hover,
+#custom-uptime:hover,
+#temperature:hover,
+#clock:hover,
+#battery:hover,
+#custom-network:hover,
+#pulseaudio:hover,
+#mpris:hover,
+#custom-power:hover {
+    font-size: 14px;
+}

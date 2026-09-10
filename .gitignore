@@ -1,0 +1,18 @@
+# file backup / sisa
+*.bak
+*.backup
+*.old
+*.save
+*.disabled
+*~
+
+# state & cache mesin (jangan dipublish)
+.config/fish/fish_variables
+.config/gtk-3.0/bookmarks
+**/generated/
+**/.cache/
+
+# secret
+*.key
+*.pem
+.env
