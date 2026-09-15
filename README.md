@@ -49,6 +49,7 @@ extras/
 | `SUPER + 1..9 / 0` | workspace 1..10 |
 | `SUPER + SHIFT + 1..9 / 0` | pindah window ke workspace |
 | `SUPER + Space` | toggle float + center 60% |
+| `SUPER + P` | pin/unpin window — ngikut terus di semua workspace (auto-float dulu, pin itu floating-only) |
 | `SUPER + Tab` | lock (hyprlock) |
 | `SUPER + Escape` | menu power (wlogout) |
 | `SUPER + SHIFT + W` | restart waybar |
