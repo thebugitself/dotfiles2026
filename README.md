@@ -1,6 +1,6 @@
 # dotfiles2026
 
-Hyprland (Wayland) dotfiles for Arch Linux — dual monitor, waybar, rofi, kitty.
+Hyprland (Wayland) dotfiles for Arch Linux. Dual monitor, waybar, rofi, kitty.
 
 The repo is a reference of the full setup: which file controls what, every keybind, and
 what has to change to use it on another machine. Grab any part of it.
@@ -28,7 +28,7 @@ Only configs that are actually in use are included. Leftovers and backups
 ├── rofi/                   # launcher (config.rasi + colors.rasi)
 ├── kitty/                  # terminal + search/scroll_mark kittens
 ├── wlogout/                # power menu (layout, style, icons)
-├── quickshell/hyprquickpaper/  # wallpaper picker (Quickshell/QML) — SUPER+W
+├── quickshell/hyprquickpaper/  # wallpaper picker (Quickshell/QML), bound to SUPER+W
 ├── dunst/                  # notifications
 ├── fish/                   # shell (config, prompt, auto-start Hyprland on tty1)
 ├── gtk-3.0/, gtk-4.0/      # GTK theme
@@ -56,7 +56,7 @@ extras/
 | `SUPER + 1..9 / 0` | workspace 1..10 |
 | `SUPER + SHIFT + 1..9 / 0` | move window to workspace |
 | `SUPER + Space` | toggle float + center at 60% |
-| `SUPER + P` | pin/unpin window — stays visible on every workspace (floats it first; pinning only works on floating windows) |
+| `SUPER + P` | pin/unpin window, stays visible on every workspace (floats it first; pinning only works on floating windows) |
 | `SUPER + Tab` | lock (hyprlock) |
 | `SUPER + Escape` | power menu (wlogout) |
 | `SUPER + SHIFT + W` | restart waybar |
@@ -89,7 +89,7 @@ cd dotfiles2026
 ```
 
 `install.sh` copies `.config/*` to `~/.config/`, replaces `/home/len` with `$HOME`, and
-optionally installs the Burp icon font. Afterwards **restart Hyprland** — the Lua config
+optionally installs the Burp icon font. Afterwards **restart Hyprland**; the Lua config
 does not fully reload without a restart.
 
 ## Notes
@@ -101,5 +101,5 @@ does not fully reload without a restart.
   (`layersIn`/`layersOut`).
 - Clipboard images show as thumbnails in rofi (`rofi -show-icons` + `icon\x1f` escape),
   see `cliphist-pick.sh`.
-- Pinning (`SUPER + P`) is floating-only — a Hyprland limitation, not a config choice.
-  That is why the bind floats the window first.
+- Pinning (`SUPER + P`) is floating-only. That is a Hyprland limitation, not a config
+  choice, which is why the bind floats the window first.
