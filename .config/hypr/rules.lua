@@ -16,7 +16,7 @@ hl.layer_rule({
 hl.window_rule({
     name = "opacity-apps",
     match = {
-        class = "^(kitty|alacritty|xed|thunar|firefox|discord|codium|GeForceNOW|obsidian|Spotify|org.pulseaudio.pavucontrol|com.github.johnfactotum.Foliate)$",
+        class = "^(kitty|xed|thunar|firefox|discord|obsidian|Spotify|org.pulseaudio.pavucontrol|com.github.johnfactotum.Foliate)$",
     },
     opacity = window_opacity .. " override " .. window_opacity .. " override 1.0 override",
 })

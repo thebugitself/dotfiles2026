@@ -21,6 +21,16 @@ hl.bind(mainMod .. " + C", hl.dsp.window.close())              -- close (user)
 hl.bind(mainMod .. " + M", hl.dsp.exit())                      -- exit (user)
 hl.bind(mainMod .. " + G", hl.dsp.window.float({ action = "toggle" })) -- float (user)
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = 0 }))      -- fullscreen (user)
+-- User: SUPER+P = pin/unpin window (ngikut terus di semua workspace).
+-- pin is floating-only: a tiled window is silently refused, so float it first.
+hl.bind(mainMod .. " + P", function()
+    local w = hl.get_active_window()
+    if w == nil then return end
+    if not w.floating then
+        hl.dispatch(hl.dsp.window.float({ action = "toggle", window = "address:" .. w.address }))
+    end
+    hl.dispatch(hl.dsp.window.pin({ window = "address:" .. w.address }))
+end)
 -- 43PR extras: SUPER+Escape = wlogout, SUPER+Tab = lock, SUPER+SHIFT+E = exit
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("wlogout -b 1 -c 20 -r 20 -L 1700 -R 1700 -T 325 -B 325"))
 hl.bind("SUPER + Tab", hl.dsp.exec_cmd("hyprlock"))

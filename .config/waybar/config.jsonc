@@ -14,7 +14,6 @@
         "format-window-separator": " ",
         "window-rewrite-default": "",
         "window-rewrite": {
-            "class<alacritty>": "",
             "class<firefox>": "",
             "class<google-chrome>": "",
             "class<discord>": "",
