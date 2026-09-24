@@ -10,8 +10,21 @@
     "modules-right": ["battery", "custom/network", "mpris", "pulseaudio", "custom/power"],
 
     "hyprland/workspaces": {
-        "format": "{name} {windows}",
+        "format": "{icon} {windows}",
         "format-window-separator": " ",
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十",
+            "default": "○"
+        },
         "window-rewrite-default": "",
         "window-rewrite": {
             "class<firefox>": "",
